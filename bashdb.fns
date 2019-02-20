@@ -111,3 +111,16 @@ function _setbp
     fi
 }
 
+#List breakpoints and break conditions
+function _listbp
+{
+    if [ -n "$_linebp" ]; then
+        _msg "Breakpoints at lines: ${_linebp[*]}"
+    else
+        _msg "No breakpoints have been set"
+    fi
+
+    _msg "Break on condition"
+    _msg "$_brcond"
+}
+
