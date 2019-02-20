@@ -207,3 +207,10 @@ function _xtrace
     fi
 }
 
+
+#Print the passed arguments to standard error
+function _msg
+{
+    echo -e "$@" >&2
+}
+
