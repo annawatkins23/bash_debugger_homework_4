@@ -155,3 +155,17 @@ function _clearbp
         _msg "Please specify a numeric line number"
     fi
 }
+
+
+#Set or clear a break condition
+function _setbc
+{
+    if [ -n "$*" ]; then
+        _brcond=$args
+        _msg "Break when true: $_brcond"
+    else
+        _brcond=
+        _msg "Break condition cleared"
+    fi
+}
+
